@@ -1,4 +1,33 @@
+* {
+    font-family: Calibri;
+    box-sizing: border-box;
+
+}
+
+h1 {
+    display: inline-block;
+}
+
+nav {
+    float: right; 
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav ul li {
+    display: inline-block;
+    padding: 30px;
+    align-items: center;
+}
+
+main {
+    display: inline-block;
+}
+
 img {
-    height: 200 px;
-    width: 200 px;
+    height: 200px;
+    width: 200px;
+    background-size: contain;
 }
