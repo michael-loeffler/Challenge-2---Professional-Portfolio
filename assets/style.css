@@ -1,21 +1,17 @@
 * {
     font-family: tahoma;
-    box-sizing: border-box;
 }
 
 :root {
     /* CSS HEX */
-    --black-coral: #3d5467ff;
-    --robin-egg-blue: rgb(79, 199, 197);
-    --cameo-pink: #d4afb9ff;
-    --tuscany: #c5979dff;
-    --mindaro: #ddfcadff;
+    --bluegray: rgb(155, 187, 227, 0.787);
 }
 
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-color: var(--bluegray);
 }
 
 h1 {
@@ -29,6 +25,7 @@ nav {
 
 nav ul {
     list-style-type: none;
+    padding: 0px;
 }
 
 nav ul li {
@@ -42,17 +39,27 @@ a {
     text-decoration: none;
 }
 
+#about {
+    background-color: var(--bluegray);
+}
+
 #wedding {
     width: 95%;
     height: 450px;
     object-fit: contain;
+    margin-left: 2.5%;
+}
+
+p {
+    margin-left: 2.5%;
 }
 
 .flexBox {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    background-color: var(--robin-egg-blue);
+    flex: 1 1 100%;
+    background-color: var(--bluegray);
 }
 
 figure:first-child {
@@ -70,7 +77,7 @@ figure {
 }
 
 figure:hover {
-    box-shadow: inset 0px 0px 8px var(--black-coral), 0 0 15px var(--black-coral);
+    box-shadow: inset 0px 0px 12px 0px white;
 }
 
 a {
@@ -86,21 +93,32 @@ img {
 
 h3,
 h4 {
-    color: white;
     margin-left: 5%;
+}
+
+#contact ul {
+    margin-left: 2.5%;
+    padding-left: 2.5%;
 }
 
 #contact ul li a {
     display: inline;
 }
 
+@media screen and (max-width: 992px) {
+    header {
+        flex: 0 1 100%;
+        flex-wrap: nowrap;
+    }
+}
+
 @media screen and (max-width: 768px) {
     header {
-        flex: 1 0 100%;
+        flex: 1 1 100%;
         flex-direction: column;
     }
-    
-    
+
+
     figure {
         flex: 1 0 95%;
     }
