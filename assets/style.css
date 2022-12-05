@@ -1,15 +1,15 @@
 * {
-    font-family: Calibri;
+    font-family: tahoma;
     box-sizing: border-box;
 }
 
 :root {
     /* CSS HEX */
---black-coral: #3d5467ff;
---robin-egg-blue: #00cecbff;
---cameo-pink: #d4afb9ff;
---tuscany: #c5979dff;
---mindaro: #ddfcadff;
+    --black-coral: #3d5467ff;
+    --robin-egg-blue: rgb(79, 199, 197);
+    --cameo-pink: #d4afb9ff;
+    --tuscany: #c5979dff;
+    --mindaro: #ddfcadff;
 }
 
 header {
@@ -38,15 +38,21 @@ nav ul li {
     font-size: 20px;
 }
 
-/* main {
-    display: inline-block;
-} */
+a {
+    text-decoration: none;
+}
+
+#wedding {
+    width: 95%;
+    height: 450px;
+    object-fit: contain;
+}
 
 .flexBox {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    background-color: aqua;
+    background-color: var(--robin-egg-blue);
 }
 
 figure:first-child {
@@ -55,11 +61,16 @@ figure:first-child {
 
 figure:first-child img {
     width: 95%;
+    justify-content: space-around;
 }
 
 figure {
     flex-basis: 45%;
     margin: 10px;
+}
+
+figure:hover {
+    box-shadow: inset 0px 0px 8px var(--black-coral), 0 0 15px var(--black-coral);
 }
 
 a {
@@ -76,13 +87,23 @@ img {
 h3,
 h4 {
     color: white;
+    margin-left: 5%;
+}
+
+#contact ul li a {
+    display: inline;
 }
 
 @media screen and (max-width: 768px) {
+    header {
+        flex: 1 0 100%;
+        flex-direction: column;
+    }
+    
+    
     figure {
-        width: 95%;
+        flex: 1 0 95%;
     }
 
 
 }
-
