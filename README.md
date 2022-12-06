@@ -20,14 +20,16 @@ This webpage features 3 hyperlinks in the navigation bar at the top-right of the
 
 Link to deployed application:
 
-    https://michael-loeffler.github.io/Challenge-1---Horiseon-Homepage-Refactor/
+    https://michael-loeffler.github.io/Professional-Portfolio/
 
-![Screenshot of Horiseon Homepage](./assets/images/Horiseon%20Homepage%20-%20Screenshot.PNG)
+![Preview of Application and demonstration of features](./assets/images/portfolioDemo.gif)
 
 ## Credits
 Images from Pexels.com
+
 A Complete Guide to Flexbox: 
     https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+
 Mozilla Developer Network
 
 
