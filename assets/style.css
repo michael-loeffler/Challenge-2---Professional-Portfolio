@@ -1,16 +1,24 @@
+/*
+**************************
+Global Styles
+**************************
+*/
 * {
     font-family: tahoma;
 }
 
 :root {
-    /* CSS HEX */
     --bluegray: rgb(155, 187, 227, 0.787);
 }
-
+/*
+**************************
+Header and Nav Styles
+**************************
+*/
 header {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: center; /*aligns h1 and nav on the same horizontal axis*/
     background-color: var(--bluegray);
 }
 
@@ -20,25 +28,28 @@ h1 {
 }
 
 nav {
-    float: right;
+    float: right; /* right justifies the nav section within the header */
 }
 
 nav ul {
-    list-style-type: none;
+    list-style-type: none; /* removes bulletpoints from the unordered list in the nav*/
     padding: 0px;
 }
 
 nav ul li {
     display: inline-block;
     padding: 30px;
-    align-items: center;
     font-size: 20px;
 }
 
 a {
-    text-decoration: none;
+    text-decoration: none; /* removes underline default from hyperlinks */
 }
-
+/*
+**************************
+Main Section Styles
+**************************
+*/
 #about {
     background-color: var(--bluegray);
 }
@@ -47,44 +58,45 @@ a {
     width: 95%;
     height: 450px;
     object-fit: contain;
-    margin-left: 2.5%;
+    margin-left: 2.5%; 
 }
 
 p {
-    margin-left: 2.5%;
+    margin-left: 2.5%; /*offsets the text for each figure away from the left boundary a bit*/
 }
 
-.flexBox {
+.flexBox { /*sets up main flex box in which all 5 images/projects will reside*/
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-around; /*centers all figures in the section*/
     flex: 1 1 100%;
     background-color: var(--bluegray);
 }
 
-figure:first-child {
+figure:first-child { /*instructs the first figure box within the .flexBox section to take up 95% the width of the screen and to have a top margin of 2.5% of the screen to match the side margins*/
     flex-basis: 95%;
+    margin-top: 2.5%;
 }
 
-figure:first-child img {
+figure:first-child img { /*instructs the image in the first figure within the .flexBox section to take up 95% of its box and center it*/
     width: 95%;
     justify-content: space-around;
 }
 
-figure {
+figure { /*instructs the other 4 figures to take up 45% of the screen on the desktop version of the webpage, so that 2 figures are shown per row, creating a 2x2 structure*/
     flex-basis: 45%;
     margin: 10px;
 }
 
-figure:hover {
+figure:hover { /*establishes the hover animation when the user hovers their cursor over any of the 5 figures*/
     box-shadow: inset 0px 0px 12px 0px white;
 }
 
 a {
-    display: flex;
+    display: flex; /*sets the a-tags as flex so that the images that reside within them can have flex properties applied to them*/
 }
 
-img {
+img { /*establishes standard image size*/
     height: 450px;
     width: 100%;
     object-fit: cover;
@@ -92,36 +104,44 @@ img {
 }
 
 h3,
-h4 {
+h4 { /*offsets the text for each figure away from the left boundary a bit*/
     margin-left: 5%;
 }
 
-#contact ul {
+#contact ul { /*offsets the unordered list in the contact info section away from the left boundary a bit*/
     margin-left: 2.5%;
     padding-left: 2.5%;
 }
 
-#contact ul li a {
+#contact ul li a { /*allows for the hyperlinks to be located next to (inline with) the strong tags that label them*/
     display: inline;
 }
 
-@media screen and (max-width: 992px) {
-    header {
-        flex: 0 1 100%;
+/*
+**************************
+Media Query Declaration and Styles
+**************************
+*/
+
+@media screen and (max-width: 992px) { /*instructs the h1 header and unordered list in the nav to shift to a vertical orientation (column-direction) when the screen passes the threshold between typical desktop/laptop displays to tablet sized screens. This happens while maintaining the 2x2 structure of figures 2-5.*/
+    h1,
+    nav ul {
+        flex: 1 0 100%;
         flex-wrap: nowrap;
+    }
+
+    header {
+        flex-direction: column;
     }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 768px) { /*instructs all 5 figures to take up the full width of the screen and stack vertically (column-direction) when the user is using a mobile device (phone)*/
     header {
-        flex: 1 1 100%;
+        flex: 1 0 100%;
         flex-direction: column;
     }
-
 
     figure {
         flex: 1 0 95%;
     }
-
-
 }
